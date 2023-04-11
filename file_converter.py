@@ -20,6 +20,7 @@ def executeCommand(command, input_file, output_file):
                 text = f.read()
             with open(output_file, 'w') as f:
                 f.write(markdown.markdown(text))
+                
     except FileNotFoundError:
         print("set <md> as file extension of input file")
         sys.exit(1)
